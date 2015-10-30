@@ -26,6 +26,12 @@ get_size_class <- function(seq){
 
 gccontent=read_dna_gc(houseelf_data$dnaseq)     # Call the content (take a vector of sequences and return a vector of GC-contents)
 
+# Creates a data frame with information about:
+# individual ID, the earth length class, and the gc-content for each individual.
+
+content=data.frame(id=houseelf_data$id,earlengthclass=houseelf_data$earlength,gccontent=gccontent)  # creating a dataframe using the Id
+
+write.csv(content,"content_class_id.csv")   # write as CSV and save the data created in my folder
 
 
 
