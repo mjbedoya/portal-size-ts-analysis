@@ -8,8 +8,8 @@ get_data<-function(){
   return(data)
 }
 
-get_size_class <-function(weight){
-  if(weight > 50) {
+get_size_class <-function(weight, threshold){
+  if(weight > threshold) {
     size_class <- "large"
   }
   else{
@@ -17,4 +17,4 @@ get_size_class <-function(weight){
   }
   return(size_class)
 }
-# Use a threshold for determining size class
+
