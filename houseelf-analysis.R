@@ -18,6 +18,12 @@ read_dna_gc <- function (data) {
   return(gc_content)
 }
 
+get_size_class <- function(seq){
+   #Calculate the GC-content for one or more sequences
+   ear_lengths <- ifelse(seq > 10, "large", "small")
+   return(ear_lengths)
+}
+
 gccontent=read_dna_gc(houseelf_data$dnaseq)     # Call the content (take a vector of sequences and return a vector of GC-contents)
 
 
